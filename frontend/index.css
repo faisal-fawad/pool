@@ -1,0 +1,220 @@
+/* Global styles */
+html {
+  font-family: 'Inter';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+button, input {
+  all: unset;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  box-sizing: border-box;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+button {
+  padding: 20px;
+  border-radius: 5px;
+  transition: .25s;
+  background: var(--button-background);
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-background-hover)
+}
+
+input {
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+  padding: 2.5px;
+}
+
+/* Variables */
+:root {
+  --menu-background: rgb(235, 235, 235);
+  --button-background: rgba(0, 0, 0, .05);
+  --button-background-hover: rgba(0, 0, 0, .1);
+  --nav-background: rgb(245, 245, 245);
+}
+
+.hide {
+  display: none !important;
+}
+
+.hide-vis {
+  visibility: hidden !important;
+}
+
+/* Table and canvas setup */
+.table-container {
+  display: flex;
+  width: 100%;
+  padding: 25px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#table {
+  display: flex;
+  max-height: calc(120vh - 175px);
+  aspect-ratio: 700 / 1375;
+  transform: rotate(90deg) translateX(-40%);
+}
+
+#table svg {
+  width: auto !important;
+  height: auto !important;
+}
+
+#table svg g {
+  fill-opacity: 0;
+  pointer-events: none;
+}
+
+#table svg .active {
+  fill-opacity: 1;
+  pointer-events: all;
+}
+
+#canvas {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.clicked {
+  pointer-events: all !important;
+}
+
+#cue {
+  z-index: 2;
+}
+
+/* Navigation bar */
+#main-menu {
+  background: var(--nav-background);
+  height: 75px;
+}
+
+#main-menu ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  list-style: none;
+}
+
+#main-menu li {
+  height: 100%;
+}
+
+#main-menu button {
+  box-sizing: border-box;
+  height: 100%;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#main-menu button:hover {
+  font-weight: 700;
+}
+
+/* Styling for the menu */
+.menu-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(2px);
+}
+
+.menu {
+  padding: 25px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  background: var(--menu-background);
+}
+
+.new-menu input {
+  width: 100%;
+}
+
+.new-menu .form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Stats */
+.stats {
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 20px;
+  width: calc(100% / 2 - 385px / 2);
+}
+
+#p1 {
+  text-align: end;
+}
+
+#p2 {
+  text-align: start;
+}
+
+.stats-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#display {
+  padding: 10px;
+}
+
+.balls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #C0D0C0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#balls {
+  display: inline-flex;
+  list-style: none;
+  gap: 2.5px;
+  margin: 0;
+  padding: 0;
+}

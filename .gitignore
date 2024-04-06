@@ -1,0 +1,10 @@
+*.txt
+/*.svg
+**Test.py
+frontend/table.svg
+*.so
+*.o
+*.db
+phylib_wrap.c
+phylib.py
+__pycache__

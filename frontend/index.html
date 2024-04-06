@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pool</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+</head>
+<body>
+  <nav id="main-menu">
+    <ul>
+      <li><button onclick="toggleNew()">NEW GAME</button></li>
+    </ul>
+  </nav>
+  <div class="table-container">
+    <div class="stats-container">
+      <div class="stats" id="p1">[Player 1 Name]</div>
+      <div class="balls-container">
+        <div style="width: 100%; display: inline-flex; justify-content: space-around; font-size: 20px; padding-bottom: 10px;">
+          <div>LOW</div>
+          <div>HIGH</div>
+        </div>
+        <ul id="balls"></ul>
+      </div>
+      <div class="stats" id="p2">[Player 2 Name]</div>
+    </div>
+    <div id="table"></div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <div id="new-menu" class="hide menu-container" onclick="toggleHide(this, event)">
+    <div class="new-menu menu">
+      <h1>NEW GAME MENU</h1>
+      <div class="form">
+        <label>Player 1 Name:</label>
+        <input type="text" id="p1-name" maxlength="64">
+        <label>Player 2 Name:</label>
+        <input type="text" id="p2-name" maxlength="64">
+        <label>Game Name:</label>
+        <input type="text" id="game-name" maxlength="64">
+        <button onclick="startGame(event)">START GAME</button>
+      </div>
+    </div>
+  </div>
+  <div id="over-menu" class="hide menu-container" onclick="toggleHide(this, event)">
+    <div class="over-menu menu">
+      <h1>GAME OVER</h1>
+      <div id="display"></div>
+    </div>
+  </div>
+</body>
+</html>
