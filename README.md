@@ -20,4 +20,8 @@ The back-end is built using C, Python, and SQL to handle Physics and store game 
 ## Future Plans
 - Ability to load games and player statistics via SQL
 
-## Screenshots
+## Screenshots & Demo
+![new](https://github.com/faisal-fawad/pool/assets/76597599/1d91c9ed-aa9f-4b8d-9fa5-18848fba5825)
+
+https://github.com/faisal-fawad/pool/assets/76597599/7c9db29b-fe7c-47ed-93da-ae3aa94fe29e
+
